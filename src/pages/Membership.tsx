@@ -1,6 +1,6 @@
 import { motion, animate, useInView } from 'framer-motion';
 import { ArrowRight, Check } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 function Counter({ from, to, duration = 2 }: { from: number, to: number, duration?: number }) {
   const ref = useRef<HTMLSpanElement>(null);

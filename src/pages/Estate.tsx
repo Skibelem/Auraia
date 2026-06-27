@@ -68,15 +68,15 @@ export default function Estate() {
 
       {/* Estates List */}
       <section className="container mx-auto px-6 md:px-12">
-        {estates.map((estate, index) => (
-          <EstateCard key={estate.id} estate={estate} index={index} />
+        {estates.map((estate) => (
+          <EstateCard key={estate.id} estate={estate} />
         ))}
       </section>
     </motion.div>
   );
 }
 
-function EstateCard({ estate, index }: { estate: any, index: number }) {
+function EstateCard({ estate}: { estate: any }) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
