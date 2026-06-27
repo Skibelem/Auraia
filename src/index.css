@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #111111;
+  --color-secondary: #250D12;
+  --color-surface: #1A1A1A;
+  --color-cream: #F5F2EB;
+  --color-beige: #E7DDCF;
+  --color-gold: #B68D40;
+  --color-gold-dark: #8A6A2D;
+  --color-white: #FFFFFF;
+  --color-muted: #8D8D8D;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-primary text-cream font-body antialiased selection:bg-gold selection:text-primary overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+
+  /* Lenis smooth scrolling reset */
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+}
+
+/* Custom Scrollbar hiding */
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
